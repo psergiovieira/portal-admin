@@ -5,7 +5,7 @@ import App from './App';
 import ReactDOM from 'react-dom';
 
 
-class Login extends Component {
+class Login extends React.Component {
 
     constructor(props) {
         super(props);
