@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod                                            
+metadata:
+  name: react-frontend                                  
+spec:                                               
+  containers:
+    - image: digojs/react-image:v1                   
+      name: react-frontend                              
+      ports:
+        - containerPort: 80                         

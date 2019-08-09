@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment                                          # 1
+metadata:
+  name: react-frontend-deployment
+spec:
+  replicas: 2                                             # 2
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate                                   # 3
+    rollingUpdate: 
+      maxUnavailable: 1                                   # 4
+      maxSurge: 1                                         # 5
+  template:                                               # 6
+    metadata:
+      labels:
+        app: react-frontend                                # 7
+    spec:
+      containers:
+        - image: digojs/react-image:v1
+          imagePullPolicy: Always                         # 8
+          name: react-frontend
+          ports:
+            - containerPort: 80
