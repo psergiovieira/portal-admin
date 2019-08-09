@@ -14,8 +14,6 @@ class Login extends React.Component {
             username: '',
             password: '',
         }
-        this.updateUsername = this.updateUsername.bind(this);
-        this.logon = this.logon.bind(this);
     }
     updateUsername(event) {
         this.setState({
@@ -50,17 +48,18 @@ class Login extends React.Component {
                         className="fadeIn second"
                         name="login"
                         placeholder="login"
-                        onChange={this.updateUsername.bind(this)} />
+                        onChange={this.updateUsername} />
                     <input type="text"
                         id="password"
                         className="fadeIn third"
                         name="login"
                         placeholder="password"
-                        onChange={this.updatePassword.bind(this)} />
+                        onChange={this.updatePassword} />
                     <input type="button"
+                        id="idButtonLogin"
                         className="fadeIn fourth"
                         value="Log In"
-                        onClick={this.logon.bind(this)}
+                        onClick={this.logon}
                     />
                 </div>
             </div>
