@@ -14,6 +14,8 @@ class Login extends React.Component {
             username: '',
             password: '',
         }
+        this.updateUsername = this.updateUsername.bind(this);	
+        this.logon = this.logon.bind(this);
     }
     updateUsername(event) {
         this.setState({
