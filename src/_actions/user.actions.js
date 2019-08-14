@@ -41,7 +41,6 @@ function logout() {
 function getUser() {
     return dispatch => {
         dispatch(request());
-        debugger
         userService.getUser()
             .then(
                 
