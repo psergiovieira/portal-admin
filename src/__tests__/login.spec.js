@@ -56,18 +56,18 @@ describe('Teste unit / Component login', () => {
         
     });
 
-    it('test change value input password ', () => {
-        const textValueInitial = '';
-        expect(component.find('input[id="password"]').instance().value).toBe(textValueInitial);
+    // it('test change value input password ', () => {
+    //     const textValueInitial = '';
+    //     expect(component.find('input[id="password"]').instance().value).toBe(textValueInitial);
         
-        const event = {target: {value: "1234"}};
-        component.find('input[id="password"]').simulate('change', event);;
+    //     const event = {target: {value: "1234"}};
+    //     component.find('input[id="password"]').simulate('change', event);;
         
         
 
-        const textValueFinal = '1234';
-        expect(component.find('input[id="password"]').instance().value).toBe(textValueFinal);
-    });
+    //     const textValueFinal = '1234';
+    //     expect(component.find('input[id="password"]').instance().value).toBe(textValueFinal);
+    // });
 
     
 
